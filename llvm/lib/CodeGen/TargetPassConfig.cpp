@@ -1099,6 +1099,8 @@ bool TargetPassConfig::addCoreISelPasses() {
 }
 
 bool TargetPassConfig::addISelPasses() {
+//linke
+  addPass(createIRDumperPass());
   if (TM->useEmulatedTLS())
     addPass(createLowerEmuTLSPass());
 
